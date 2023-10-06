@@ -1,0 +1,19 @@
+{
+  "name": "bun-elysia-tsx-htmx",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "dependencies": {
+    "@elysiajs/html": "^0.7.0",
+    "elysia": "^0.7.15",
+    "@types/lodash": "^4.14.198",
+    "lodash": "^4.17.21",
+    "react": "^18.2.0",
+    "typed-html": "^3.0.1"
+  }
+}
