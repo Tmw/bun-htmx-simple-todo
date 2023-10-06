@@ -1,5 +1,5 @@
 {
-  "name": "bun-elysia-tsx-htmx",
+  "name": "bun-html-simple-todo",
   "module": "index.ts",
   "type": "module",
   "devDependencies": {
