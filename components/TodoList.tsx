@@ -17,7 +17,7 @@ export function TodoList({ todos }: Props) {
       class="h-full flex flex-col justify-center items-center"
     >
       <div id="new-todo" class="w-2/3">
-        <div id="row-{{.ID}}" class="p-0 my-0 flex flex-row">
+        <div class="p-0 my-0 flex flex-row">
           <form
             hx-post="/todos"
             hx-swap="outerHTML"

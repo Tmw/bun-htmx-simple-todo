@@ -30,7 +30,7 @@ export function TodoItem({ todo }: Props) {
     <div
       id="row-{todo.id}"
       class="bg-indigo-50 rounded-s p-4 my-2 shadow-sm hover:scale-105 transition-all hover:shadow-md flex cursor-pointer group/item"
-      hx-put="/todos/{{.ID}}/toggle"
+      hx-put={`/todos/${todo.id}/toggle`}
       hx-swap="outerHTML"
       hx-target="#todo-list"
     >
@@ -49,7 +49,7 @@ export function TodoItem({ todo }: Props) {
 
       <button
         class="invisible group-hover/item:visible"
-        hx-delete="/todos/{{.ID}}"
+        hx-delete={`/todos/${todo.id}`}
         hx-swap="outerHTML"
         hx-target="#todo-list"
         hx-trigger="click consume"

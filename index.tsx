@@ -26,6 +26,22 @@ const main = new Elysia()
     },
     { body: t.Object({ todo: t.String() }) }
   )
+  .delete(
+    "/todos/:id",
+    ({ params, todoStore }) => {
+      todoStore.delete(params.id);
+      return <TodoList todos={todoStore.list()} />;
+    },
+    { params: t.Object({ id: t.Numeric() }) }
+  )
+  .put(
+    "/todos/:id/toggle",
+    ({ params, todoStore }) => {
+      todoStore.toggle(params.id);
+      return <TodoList todos={todoStore.list()} />;
+    },
+    { params: t.Object({ id: t.Numeric() }) }
+  )
   .listen(8080);
 
 console.log(`listening on: ${main.server?.hostname}:${main.server?.port}`);
