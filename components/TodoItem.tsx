@@ -29,19 +29,19 @@ export function TodoItem({ todo }: Props) {
   return (
     <div
       id="row-{todo.id}"
-      class="bg-indigo-50 rounded-s p-4 my-2 shadow-sm hover:scale-105 transition-all hover:shadow-md flex flex-row items-center gap-4 cursor-pointer group/item"
+      class="bg-indigo-50 rounded-s p-4 my-2 shadow-sm hover:scale-105 transition-all hover:shadow-md flex cursor-pointer group/item"
       hx-put="/todos/{{.ID}}/toggle"
       hx-swap="outerHTML"
       hx-target="#todo-list"
     >
       {todoCompleted ? (
-        <div class="flex-grow">
+        <div class="flex-grow flex gap-4 flex-row items-center">
           {" "}
           <input type="checkbox" checked="checked" class="w-6 h-6" />
           <span class="text-xl line-through">{todo.title}</span>
         </div>
       ) : (
-        <div class="flex-grow">
+        <div class="flex-grow flex gap-4 flex-row items-center">
           <input type="checkbox" class="w-6 h-6" />
           <span class="text-xl">{todo.title}</span>
         </div>
