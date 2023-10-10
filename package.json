@@ -1,6 +1,6 @@
 {
   "name": "bun-html-simple-todo",
-  "module": "index.ts",
+  "module": "index.tsx",
   "type": "module",
   "devDependencies": {
     "bun-types": "latest"
@@ -15,5 +15,11 @@
     "lodash": "^4.17.21",
     "react": "^18.2.0",
     "typed-html": "^3.0.1"
+  },
+  "scripts": {
+    "start": "bun index.tsx",
+    "watch": "bun run --watch index.tsx",
+    "test": "bun test",
+    "test:watch": "bun test --watch"
   }
 }
