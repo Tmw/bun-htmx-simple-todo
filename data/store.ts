@@ -4,12 +4,6 @@ export class InMemoryTodoStore {
   private counter: number = 1;
   private todos: Todo[] = [];
 
-  constructor() {
-    this.create("test");
-    this.create("first", true);
-    this.create("second");
-  }
-
   create(title: string, completed?: boolean) {
     const todo = {
       id: this.counter++,

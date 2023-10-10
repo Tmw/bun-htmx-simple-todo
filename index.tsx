@@ -8,6 +8,10 @@ import { App } from "./components/layouts/App";
 import { InMemoryTodoStore } from "./data/store";
 
 const todoStore = new InMemoryTodoStore();
+todoStore.create("test");
+todoStore.create("first", true);
+todoStore.create("second");
+
 const registry = {
   todoStore,
 } as const;
